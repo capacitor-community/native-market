@@ -1,14 +1,15 @@
 {
-  "name": "native-market",
+  "name": "@capacitor-community/native-market",
   "version": "0.0.1",
-  "description": "Native Market for Capacitor Community",
+  "description": "A native market plugin for linking to google play.",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish": "np"
   },
   "author": "Priyank Patel <priyank.patel@stackspace.ca>",
   "license": "MIT",
@@ -42,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:capacitor-community/native-market.git"
+    "url": "https://github.com/capacitor-community/native-market"
   },
   "bugs": {
-    "url": "git@github.com:capacitor-community/native-market.git/issues"
+    "url": "https://github.com/capacitor-community/native-market/issues"
   }
 }
