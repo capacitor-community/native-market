@@ -8,10 +8,27 @@ export class NativeMarketWeb extends WebPlugin implements NativeMarketPlugin {
       platforms: ['web']
     });
   }
-  open(options: { appId: string; }): Promise<void> {
+
+  openStoreListing(options: { appId: string; }): Promise<void> {
     console.warn(options);
     throw new Error("Method not implemented.");
   }
+  
+  openDevPage(options: { devId: string; }): Promise<void> {
+    console.warn(options);
+    throw new Error("Method not implemented.");
+  }
+
+  openCollection(options: { name: string; }): Promise<void> {
+    console.warn(options);
+    throw new Error("Method not implemented.");
+  }
+
+  openEditorChoicePage(options: { editorChoice: string; }): Promise<void> {
+    console.warn(options);
+    throw new Error("Method not implemented.");
+  }
+
   search(options: { terms: string; }): Promise<void> {
     console.warn(options);
     throw new Error("Method not implemented.");

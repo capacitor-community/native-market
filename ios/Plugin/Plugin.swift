@@ -8,7 +8,7 @@ import Capacitor
 @objc(NativeMarket)
 public class NativeMarket: CAPPlugin {
     
-    @objc func open(_ call: CAPPluginCall) {
+    @objc func openStoreListing(_ call: CAPPluginCall) {
         if call.hasOption("appId") {
             let appId = call.getString("appId")
             
@@ -28,6 +28,18 @@ public class NativeMarket: CAPPlugin {
         } else {
             call.reject("appId is missing")
         }
+    }
+    
+    @objc func openDevPage(_ call: CAPPluginCall) {
+        call.success() // TODO: Implement
+    }
+    
+    @objc func openCollection(_ call: CAPPluginCall) {
+        call.success() // TODO: Implement
+    }
+    
+    @objc func openEditorChoicePage(_ call: CAPPluginCall) {
+        call.success() // TODO: Implement
     }
     
     @objc func search(_ call: CAPPluginCall) {

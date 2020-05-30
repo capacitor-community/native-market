@@ -14,19 +14,79 @@ import com.getcapacitor.PluginMethod;
 public class NativeMarket extends Plugin {
 
     @PluginMethod()
-    public void open(PluginCall call) {
+    public void openStoreListing(PluginCall call) {
         try {
             if (call.hasOption("appId")) {
                 String appId = call.getString("appId");
 
                 Context context = this.getContext();
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id" + appId));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appId));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
                 call.success();
             } else {
                 call.reject("appId is missing");
+            }
+        } catch (Exception ex) {
+            call.error(ex.getLocalizedMessage());
+        }
+    }
+
+    @PluginMethod()
+    public void openDevPage(PluginCall call) {
+        try {
+            if (call.hasOption("devId")) {
+                String devId = call.getString("devId");
+
+                Context context = this.getContext();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://dev?id=" + devId));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+
+                call.success();
+            } else {
+                call.reject("devId is missing");
+            }
+        } catch (Exception ex) {
+            call.error(ex.getLocalizedMessage());
+        }
+    }
+
+    @PluginMethod()
+    public void openCollection(PluginCall call) {
+        try {
+            if (call.hasOption("name")) {
+                String name = call.getString("name");
+
+                Context context = this.getContext();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://collection/" + name));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+
+                call.success();
+            } else {
+                call.reject("name is missing");
+            }
+        } catch (Exception ex) {
+            call.error(ex.getLocalizedMessage());
+        }
+    }
+
+    @PluginMethod()
+    public void openEditorChoicePage(PluginCall call) {
+        try {
+            if (call.hasOption("editorChoice")) {
+                String editorChoice = call.getString("editorChoice");
+
+                Context context = this.getContext();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://topic?id=" + editorChoice));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+
+                call.success();
+            } else {
+                call.reject("editorChoice is missing");
             }
         } catch (Exception ex) {
             call.error(ex.getLocalizedMessage());
