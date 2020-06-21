@@ -59,12 +59,12 @@ No configuration required for this plugin
 ## Supported methods
 
 | Name  | Android | iOS | Web
-| :---- | :------: | :--- | :--- | :--- | :--- | :--- |
-| openStoreListing | ✅ | ✅ | ❌
-| openDevPage | ✅ | ❌ | ❌
-| openCollection | ✅ | ❌ | ❌
-| openEditorChoicePage | ✅ | ❌ | ❌
-| search | ✅ | ✅ | ❌
+| :---- | :--- | :--- | :--- |
+| openStoreListing | ✅ | ✅ | ❌ 
+| openDevPage | ✅ | ❌ | ❌ 
+| openCollection | ✅ | ❌ | ❌ 
+| openEditorChoicePage | ✅ | ❌ | ❌ 
+| search | ✅ | ✅ | ❌ 
 
 ## Usage
 
