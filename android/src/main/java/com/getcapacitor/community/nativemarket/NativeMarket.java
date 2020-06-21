@@ -18,7 +18,7 @@ public class NativeMarket extends Plugin {
             if (call.hasOption("appId")) {
                 String appId = call.getString("appId");
 
-                Context context = this.getContext();
+                Context context = this.bridge.getActivity().getApplicationContext();
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appId));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
@@ -39,7 +39,8 @@ public class NativeMarket extends Plugin {
                 String devId = call.getString("devId");
 
                 Context context = this.getContext();
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://dev?id=" + devId));
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://play.google.com/store/apps/dev?id=" + devId));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
@@ -59,7 +60,8 @@ public class NativeMarket extends Plugin {
                 String name = call.getString("name");
 
                 Context context = this.getContext();
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://collection/" + name));
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://play.google.com/store/apps/collection/" + name));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
@@ -79,7 +81,8 @@ public class NativeMarket extends Plugin {
                 String editorChoice = call.getString("editorChoice");
 
                 Context context = this.getContext();
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://topic?id=" + editorChoice));
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://play.google.com/store/apps/topic?id=" + editorChoice));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 

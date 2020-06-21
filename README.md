@@ -69,7 +69,7 @@ No configuration required for this plugin
 ## Usage
 
 ```typescript
-import { NativeMarket } from 'native-market';
+import { NativeMarketPlugin } from '@capacitor-community/native-market';
 
 const nativeMarket = new NativeMarket();
 
