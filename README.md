@@ -69,16 +69,16 @@ No configuration required for this plugin
 ## Usage
 
 ```typescript
-import { NativeMarket } from '@capacitor-community/native-market';
+import { Plugins } from '@capacitor/core';
 
-const nativeMarket = new NativeMarket();
+const { NativeMarket } = Plugins;
 
 /**
  * This method will launch link in Play/App Store.
  * @param appId - ID of your application. Eg. com.example.app
  * @returns void
  */
-nativeMarket.openStoreListing({
+NativeMarket.openStoreListing({
   appId: 'com.example.app',
 });
 
@@ -87,7 +87,7 @@ nativeMarket.openStoreListing({
  * @param devId - ID of developer. Eg. com.example.app
  * @returns void
  */
-nativeMarket.openDevPage({
+NativeMarket.openDevPage({
   devId: '5700313618786177705',
 });
 
@@ -96,7 +96,7 @@ nativeMarket.openDevPage({
  * @param name - name of the collection. Click [here](https://developer.android.com/distribute/marketing-tools/linking-to-google-play#OpeningCollection) for android options.
  * @returns void
  */
-nativeMarket.openCollection({
+NativeMarket.openCollection({
   name: 'featured',
 });
 
@@ -105,7 +105,7 @@ nativeMarket.openCollection({
  * @param editorChoice - ID of your application. Eg. editorial_fitness_apps_us
  * @returns void
  */
-nativeMarket.openEditorChoicePage({
+NativeMarket.openEditorChoicePage({
   editorChoice: 'editorial_fitness_apps_us',
 });
 
@@ -114,7 +114,7 @@ nativeMarket.openEditorChoicePage({
  * @param editorChoice - terms to be searched in Play/App store.
  * @returns void
  */
-nativeMarket.search({
+NativeMarket.search({
   terms: 'capacitor',
 });
 ```
