@@ -1,6 +1,6 @@
 
   Pod::Spec.new do |s|
-    s.name = 'NativeMarket'
+    s.name = 'CapacitorCommunityNativeMarket'
     s.version = '0.0.1'
     s.summary = 'A native market plugin for linking to google play.'
     s.license = 'MIT'
