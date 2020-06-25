@@ -15,14 +15,16 @@ public class NativeMarket: CAPPlugin {
             let url = "itms-apps://itunes.apple.com/app/" + appId!
             let appUrl = URL(string: url)
             
-            if UIApplication.shared.canOpenURL(appUrl!) {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(appUrl!, options: [:]) { (success) in
+            DispatchQueue.main.async {
+                if UIApplication.shared.canOpenURL(appUrl!) {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(appUrl!, options: [:]) { (success) in
+                            call.success()
+                        }
+                    } else {
+                        UIApplication.shared.openURL(appUrl!)
                         call.success()
                     }
-                } else {
-                    UIApplication.shared.openURL(appUrl!)
-                    call.success()
                 }
             }
         } else {
