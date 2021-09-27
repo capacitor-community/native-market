@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/native-market",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "A native market plugin for linking to google play or app store.",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -9,7 +9,7 @@
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "npm-publish": "np --any-branch"
+    "npm-publish": "np"
   },
   "author": "Priyank Patel <priyank.patel@stackspace.ca>",
   "license": "MIT",
@@ -36,7 +36,7 @@
     "dist/",
     "ios/",
     "android/",
-    "NativeMarket.podspec"
+    "CapacitorCommunityNativeMarket.podspec"
   ],
   "keywords": [
     "capacitor",
