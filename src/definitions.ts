@@ -1,9 +1,3 @@
-declare module "@capacitor/core" {
-  interface PluginRegistry {
-    NativeMarket: NativeMarketPlugin;
-  }
-}
-
 export interface NativeMarketPlugin {
   openStoreListing(options: { appId: string }): Promise<void>;
   openDevPage(options: { devId: string }): Promise<void>;

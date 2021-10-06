@@ -1,2 +1,10 @@
-export * from './definitions';
-export * from './web';
+import { registerPlugin } from "@capacitor/core";
+import { NativeMarketPlugin } from "./definitions";
+
+const NativeMarket = registerPlugin<NativeMarketPlugin>("NativeMarket", {
+  web: () => import("./web").then((m) => new m.NativeMarketWeb()),
+});
+
+// export * from './web'; // @todo
+export * from "./definitions";
+export { NativeMarket };
