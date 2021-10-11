@@ -9,35 +9,27 @@ export class NativeMarketWeb extends WebPlugin implements NativeMarketPlugin {
     });
   }
 
-  openStoreListing(options: { appId: string }): Promise<void> {
-    console.warn(options);
-    throw new Error("Method not implemented.");
+  openStoreListing(_options: { appId: string }): Promise<void> {
+    throw this.unimplemented("Not implemented on web.");
   }
 
-  openDevPage(options: { devId: string }): Promise<void> {
-    console.warn(options);
-    throw new Error("Method not implemented.");
+  openDevPage(_options: { devId: string }): Promise<void> {
+    throw this.unimplemented("Not implemented on web.");
   }
 
-  openCollection(options: { name: string }): Promise<void> {
-    console.warn(options);
-    throw new Error("Method not implemented.");
+  openCollection(_options: { name: string }): Promise<void> {
+    throw this.unimplemented("Not implemented on web.");
   }
 
-  openEditorChoicePage(options: { editorChoice: string }): Promise<void> {
-    console.warn(options);
-    throw new Error("Method not implemented.");
+  openEditorChoicePage(_options: { editorChoice: string }): Promise<void> {
+    throw this.unimplemented("Not implemented on web.");
   }
 
-  search(options: { terms: string }): Promise<void> {
-    console.warn(options);
-    throw new Error("Method not implemented.");
+  search(_options: { terms: string }): Promise<void> {
+    throw this.unimplemented("Not implemented on web.");
   }
 }
 
 const NativeMarket = new NativeMarketWeb();
 
 export { NativeMarket };
-
-import { registerWebPlugin } from "@capacitor/core";
-registerWebPlugin(NativeMarket);
