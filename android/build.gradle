@@ -44,6 +44,9 @@ repositories {
 
 
 dependencies {
+    // cf. https://github.com/capacitor-community/firebase-analytics/issues/55
+    implementation "androidx.appcompat:appcompat:1.2.0"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
     testImplementation "junit:junit:$junitVersion"
