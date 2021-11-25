@@ -15,12 +15,12 @@
   "author": "Priyank Patel <priyank.patel@stackspace.ca>",
   "license": "MIT",
   "dependencies": {
-    "@capacitor/core": "^3.0.0"
+    "@capacitor/core": "^3.3.2"
   },
   "devDependencies": {
-    "@capacitor/android": "^3.0.0",
-    "@capacitor/cli": "^3.0.0",
-    "@capacitor/ios": "^3.0.0",
+    "@capacitor/android": "^3.3.2",
+    "@capacitor/cli": "^3.3.2",
+    "@capacitor/ios": "^3.3.2",
     "husky": "^4.2.5",
     "np": "^6.2.4",
     "prettier": "^2.0.5",
