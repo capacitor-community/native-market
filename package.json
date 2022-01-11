@@ -56,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/djonmayer/native-market"
+    "url": "https://github.com/capacitor-community/native-market"
   },
   "bugs": {
-    "url": "https://github.com/djonmayer/native-market/issues"
+    "url": "https://github.com/capacitor-community/native-market/issues"
   }
 }
