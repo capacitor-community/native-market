@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/native-market",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A native market plugin for linking to google play or app store.",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
