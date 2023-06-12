@@ -16,7 +16,7 @@ Maintenance Status: Actively Maintained
 | ----------------- | -------------- |
 | 5.x               | 5.x            |
 | 4.x               | 4.x            |
-| < 3.x             | 1.x            |
+| < 3.x             | 0.1.x          |
 
 ## Installation
 
@@ -38,35 +38,6 @@ Sync native files
 npx cap sync
 ```
 
-iOS Platform: No further action required.
-
-Android Platform: Register the plugin in your main activity:
-
-```java
-import com.getcapacitor.community.nativemarket.NativeMarket;
-
-public class MainActivity extends BridgeActivity {
-
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    // Initializes the Bridge
-    this.init(
-        savedInstanceState,
-        new ArrayList<Class<? extends Plugin>>() {
-          {
-            // Additional plugins you've installed go here
-            // Ex: add(TotallyAwesomePlugin.class);
-            add(NativeMarket.class);
-          }
-        }
-      );
-  }
-}
-
-```
-
 ## Configuration
 
 No configuration required for this plugin
@@ -84,9 +55,7 @@ No configuration required for this plugin
 ## Usage
 
 ```typescript
-import { Plugins } from "@capacitor/core";
-
-const { NativeMarket } = Plugins;
+import { NativeMarket } from "@capacitor-community/native-market";
 
 /**
  * This method will launch link in Play/App Store.
