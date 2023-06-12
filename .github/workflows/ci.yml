@@ -13,16 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install yarn
+      - name: Install npm
         uses: actions/setup-node@v3
         with:
           node-version: "16"
 
       - name: Install deps
-        run: yarn install
-
-      # - name: Run tests
-      #   run: yarn test
+        run: npm install
 
       - name: Run build
-        run: yarn build
+        run: npm run build
