@@ -2,6 +2,9 @@
 
 Capacitor community plugin for native market for Play Store/App Store.
 
+**Note:** The plugin doesn't work on iOS Simulator because it doesn't have App Store app installed.
+It works on Android Virtual Devices if they have Google Play installed with an user loged in.
+
 ## Maintainers
 
 | Maintainer    | GitHub                                      | Social                                           | Sponsoring Company |
@@ -56,14 +59,22 @@ No configuration required for this plugin
 
 ```typescript
 import { NativeMarket } from "@capacitor-community/native-market";
+import { Capacitor } from "@capacitor/core";
 
 /**
  * This method will launch link in Play/App Store.
- * @param appId - ID of your application. Eg. com.example.app
+ * @param appId - ID of your application.
+ * Eg:
+ * io.ionic.ioniconf on Android
+ * id1622127552 on iOS
  * @returns void
  */
+let appId = "id1622127552";
+if (Capacitor.getPlatform() === "android") {
+  appId = "io.ionic.ioniconf";
+}
 NativeMarket.openStoreListing({
-  appId: "com.example.app",
+  appId: appId,
 });
 
 /**
