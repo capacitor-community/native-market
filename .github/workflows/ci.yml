@@ -2,24 +2,33 @@ name: Test and Build Plugin
 
 on:
   push:
-    branches: [master, develop]
+    branches: [master]
   pull_request:
     branches: [master]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-14
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install npm
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "18"
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "17"
 
       - name: Install deps
         run: npm install
 
       - name: Run build
         run: npm run build
+
+      - name: Run verify
+        run: npm run verify
