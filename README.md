@@ -7,9 +7,9 @@ It works on Android Virtual Devices if they have Google Play installed with a us
 
 ## Maintainers
 
-| Maintainer    | GitHub                                      | Social                                           | Sponsoring Company |
-| ------------- | ------------------------------------------- | ------------------------------------------------ | ------------------ |
-| Priyank Patel | [priyankpat](https://github.com/priyankpat) | [@priyankpat\_](https://twitter.com/priyankpat_) | Ionic              |
+| Maintainer    | GitHub                                      | Social                                           |
+| ------------- | ------------------------------------------- | ------------------------------------------------ |
+| Priyank Patel | [priyankpat](https://github.com/priyankpat) | [@priyankpat\_](https://twitter.com/priyankpat_) |
 
 Maintenance Status: Actively Maintained
 
@@ -17,6 +17,7 @@ Maintenance Status: Actively Maintained
 
 | Capacitor version | Plugin version |
 | ----------------- | -------------- |
+| 6.x               | 6.x            |
 | 5.x               | 5.x            |
 | 4.x               | 4.x            |
 | < 3.x             | 0.1.x          |
