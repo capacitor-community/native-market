@@ -10,8 +10,9 @@
     "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS && cd ..",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && npm run docgen && tsc",
     "clean": "rimraf ./dist",
+    "docgen": "docgen --api NativeMarketPlugin --output-readme README.md",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
     "npm-publish": "np --no-tests"
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@capacitor/android": "^6.0.0",
     "@capacitor/cli": "^6.0.0",
+    "@capacitor/docgen": "^0.2.2",
     "@capacitor/ios": "^6.0.0",
     "@types/node": "^15.14.9",
     "husky": "^4.2.5",
