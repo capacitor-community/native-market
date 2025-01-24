@@ -58,11 +58,11 @@ No configuration required for this plugin
 
 <docgen-index>
 
-- [`openStoreListing(...)`](#openstorelisting)
-- [`openDevPage(...)`](#opendevpage)
-- [`openCollection(...)`](#opencollection)
-- [`openEditorChoicePage(...)`](#openeditorchoicepage)
-- [`search(...)`](#search)
+* [`openStoreListing(...)`](#openstorelisting)
+* [`openDevPage(...)`](#opendevpage)
+* [`openCollection(...)`](#opencollection)
+* [`openEditorChoicePage(...)`](#openeditorchoicepage)
+* [`search(...)`](#search)
 
 </docgen-index>
 
@@ -138,7 +138,8 @@ openStoreListing(options: { appId: string; }) => Promise<void>
 | ------------- | ------------------------------- |
 | **`options`** | <code>{ appId: string; }</code> |
 
----
+--------------------
+
 
 ### openDevPage(...)
 
@@ -150,7 +151,8 @@ openDevPage(options: { devId: string; }) => Promise<void>
 | ------------- | ------------------------------- |
 | **`options`** | <code>{ devId: string; }</code> |
 
----
+--------------------
+
 
 ### openCollection(...)
 
@@ -162,7 +164,8 @@ openCollection(options: { name: string; }) => Promise<void>
 | ------------- | ------------------------------ |
 | **`options`** | <code>{ name: string; }</code> |
 
----
+--------------------
+
 
 ### openEditorChoicePage(...)
 
@@ -174,7 +177,8 @@ openEditorChoicePage(options: { editorChoice: string; }) => Promise<void>
 | ------------- | -------------------------------------- |
 | **`options`** | <code>{ editorChoice: string; }</code> |
 
----
+--------------------
+
 
 ### search(...)
 
@@ -186,6 +190,6 @@ search(options: { terms: string; }) => Promise<void>
 | ------------- | ------------------------------- |
 | **`options`** | <code>{ terms: string; }</code> |
 
----
+--------------------
 
 </docgen-api>
