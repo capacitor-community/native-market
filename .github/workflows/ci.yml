@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-15
 
     steps:
       - uses: actions/checkout@v4
@@ -16,13 +16,13 @@ jobs:
       - name: Install npm
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
 
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
           distribution: "zulu"
-          java-version: "17"
+          java-version: "21"
 
       - name: Install deps
         run: npm install
