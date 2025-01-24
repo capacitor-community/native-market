@@ -3,13 +3,6 @@ import { WebPlugin } from '@capacitor/core';
 import type { NativeMarketPlugin } from './definitions';
 
 export class NativeMarketWeb extends WebPlugin implements NativeMarketPlugin {
-  constructor() {
-    super({
-      name: 'NativeMarket',
-      platforms: ['web'],
-    });
-  }
-
   openStoreListing(_options: { appId: string }): Promise<void> {
     throw this.unimplemented('Not implemented on web.');
   }
