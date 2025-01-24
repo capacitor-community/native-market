@@ -10,9 +10,14 @@
     "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS && cd ..",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
+    "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
+    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- --fix --format",
+    "eslint": "eslint . --ext ts",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\" --plugin=prettier-plugin-java",
+    "swiftlint": "node-swiftlint",
+    "docgen": "docgen --api NativeMarketPlugin --output-readme README.md",
     "build": "npm run clean && npm run docgen && tsc",
     "clean": "rimraf ./dist",
-    "docgen": "docgen --api NativeMarketPlugin --output-readme README.md",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
     "npm-publish": "np --no-tests"
@@ -24,16 +29,25 @@
     "@capacitor/cli": "^6.0.0",
     "@capacitor/docgen": "^0.2.2",
     "@capacitor/ios": "^6.0.0",
+    "@ionic/eslint-config": "^0.4.0",
+    "@ionic/prettier-config": "^4.0.0",
+    "@ionic/swiftlint-config": "^2.0.0",
     "@types/node": "^15.14.9",
+    "eslint": "^8.57.1",
     "np": "^10.0.5",
     "prettier": "^2.3.0",
     "prettier-plugin-java": "^1.0.2",
-    "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.2",
+    "swiftlint": "^2.0.0",
     "typescript": "~4.1.5"
   },
   "peerDependencies": {
     "@capacitor/core": "^6.0.0"
+  },
+  "prettier": "@ionic/prettier-config",
+  "swiftlint": "@ionic/swiftlint-config",
+  "eslintConfig": {
+    "extends": "@ionic/eslint-config/recommended"
   },
   "files": [
     "dist/",
