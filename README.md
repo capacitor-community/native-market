@@ -5,18 +5,13 @@ Capacitor community plugin for native market for Play Store/App Store.
 **Note:** The plugin doesn't work on iOS Simulator because it doesn't have App Store app installed.
 It works on Android Virtual Devices if they have Google Play installed with a user logged in.
 
-## Maintainers
-
-| Maintainer    | GitHub                                      | Social                                           |
-| ------------- | ------------------------------------------- | ------------------------------------------------ |
-| Priyank Patel | [priyankpat](https://github.com/priyankpat) | [@priyankpat\_](https://twitter.com/priyankpat_) |
-
 Maintenance Status: Actively Maintained
 
 ## Plugin versions
 
 | Capacitor version | Plugin version |
 | ----------------- | -------------- |
+| 7.x               | 7.x            |
 | 6.x               | 6.x            |
 | 5.x               | 5.x            |
 | 4.x               | 4.x            |
