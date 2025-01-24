@@ -25,7 +25,6 @@
     "@capacitor/docgen": "^0.2.2",
     "@capacitor/ios": "^6.0.0",
     "@types/node": "^15.14.9",
-    "husky": "^4.2.5",
     "np": "^10.0.5",
     "prettier": "^2.3.0",
     "prettier-plugin-java": "^1.0.2",
@@ -35,11 +34,6 @@
   },
   "peerDependencies": {
     "@capacitor/core": "^6.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "files": [
     "dist/",
