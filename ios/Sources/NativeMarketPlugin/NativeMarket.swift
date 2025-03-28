@@ -14,11 +14,10 @@ public class NativeMarket: CAPPlugin, CAPBridgedPlugin {
         CAPPluginMethod(name: "openDevPage", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "openCollection", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "openEditorChoicePage", returnType: CAPPluginReturnPromise),
-        CAPPluginMethod(name: "search", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "search", returnType: CAPPluginReturnPromise)
     ]
 
     private let implementation = NativeMarket()
-
 
     @objc func openStoreListing(_ call: CAPPluginCall) {
         if let appId = call.getString("appId") {
