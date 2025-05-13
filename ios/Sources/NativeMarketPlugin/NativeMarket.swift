@@ -17,8 +17,6 @@ public class NativeMarket: CAPPlugin, CAPBridgedPlugin {
         CAPPluginMethod(name: "search", returnType: CAPPluginReturnPromise)
     ]
 
-    private let implementation = NativeMarket()
-
     @objc func openStoreListing(_ call: CAPPluginCall) {
         if let appId = call.getString("appId") {
             let url = "itms-apps://itunes.apple.com/app/" + appId
