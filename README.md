@@ -17,23 +17,10 @@ Maintenance Status: Actively Maintained
 | 4.x               | 4.x            |
 | < 3.x             | 0.1.x          |
 
-## Installation
-
-To use npm
+## Install
 
 ```bash
 npm install @capacitor-community/native-market
-```
-
-To use yarn
-
-```bash
-yarn add @capacitor-community/native-market
-```
-
-Sync native files
-
-```bash
 npx cap sync
 ```
 
